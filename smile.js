@@ -1,4 +1,8 @@
 const smile = (arr) => {
+  if (!arr || arr.length === 0) {
+    return 0;
+  }
+
   let faceRegex = /[;:][~-]?[)D]/;
   let incr = 0;
   for (face of arr) {
@@ -9,8 +13,8 @@ const smile = (arr) => {
   return incr;
 };
 
-console.log(smile([';]', ':[', ';*', ':$', ';-D']))
+console.log(smile([";]", ":[", ";*", ":$", ";-D"]));
 
 module.exports = {
-    smile,
+  smile,
 };

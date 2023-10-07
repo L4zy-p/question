@@ -11,6 +11,10 @@ const findeMax = (text, first, l, h) => {
 };
 
 const permutation = (text) => {
+  if (!text || text.length === 0) {
+    return [];
+  }
+
   let textSize = text.length;
   text = text.split("");
 
